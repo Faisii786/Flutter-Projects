@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/second_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -42,6 +43,7 @@ class HomePage extends StatelessWidget {
                         ),
                         hintText: "Enter Password",
                         labelText: "Password"),
+                    obscureText: true,
                   ),
                   SizedBox(
                     height: 20,
@@ -51,7 +53,12 @@ class HomePage extends StatelessWidget {
                       "Login",
                       style: TextStyle(fontSize: 15),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SecondScreen()));
+                    },
                   ),
                 ],
               ),
